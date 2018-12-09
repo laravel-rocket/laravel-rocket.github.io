@@ -1,0 +1,6 @@
+- [Home](/)
+- Getting started
+  - [Quick start](getting-started/01-quick-start.md)
+  - [How to Develop](getting-started/02-how-to-develop.md)
+- Coding and Design rules
+  - [Database Design Rules](coding-rules/database.md)
