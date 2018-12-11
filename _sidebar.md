@@ -1,6 +1,8 @@
 - [Home](/)
 - Getting started
   - [Quick start](getting-started/01-quick-start.md)
-  - [How to Develop](getting-started/02-how-to-develop.md)
+  - [How to develop](getting-started/02-how-to-develop.md)
+  - [Code structure](getting-started/03-code-structure.md)
+  - [How to write business logics](getting-started/03-how-to-write-business-logics.md)
 - Coding and Design rules
-  - [Database Design Rules](coding-rules/database.md)
+  - [Database design rules](coding-rules/database.md)
