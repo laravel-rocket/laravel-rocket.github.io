@@ -15,7 +15,7 @@ Table name must be:
   * Plural form
   * Snake case ( use only small letters )
 
-And you must not use any kind of abbreviation forms. It's because abbreviation form sometimes has multiple meanings and someone may not understand what does it mean properly. 
+And you must not use any kind of abbreviation forms. It's because abbreviation form sometimes has multiple meanings and someone may not understand what it means properly.
 
 And relation table must be [singular form of parent table] _ [plural form of children table]. For example, you want to make many to many relationship between `users` and `organizations`, relation table's name should be `user_organizations`.
 
