@@ -16,11 +16,11 @@ Responsibilities of controllers are the following:
 
 You MUST NOT do the following things on controllers
 
-#### Must not generate Model instance directory
+#### Must not generate Model instance directly
 
 All controllers must use repositories to access ( get / create / update / delete ) models. Must not create model instance and/or use model's static method directly. Accessing constant of models are only exception to use Model in controllers.
 
-#### Must not write business logics directory
+#### Must not write business logics directly
 
 Use service to write business logics. Repositoroes are not a place to write business logics. You need to use services to write business logics and 
 
@@ -36,11 +36,11 @@ Responsibilities of services are the following:
 
 You can create new Service with the command `php artisan rocket:make:service [ServiceName]`. This command generate service, service interface, and unit test.
 
-Call service from other service is allowed, but be careful with circler dependency.
+Call service from other service is allowed, but be careful with circular dependency.
 
 You MUST NOT do the following things on services
 
-#### Must not generate Model directory
+#### Must not generate Model directly
 
 All services must use repositories to access ( get / create / update / delete ) models same as controllers. Must not create model instance and/or use model's static method directly. Accessing constant of models are only exception to use Model in services.
 
@@ -129,13 +129,13 @@ There are several helpers defined in the [laravel-rocket/foundation](https://git
 
 All repositories/services/helpers must be provided with interface. And to use them ( except for helpers ), you should use DI( Dependency Injection) on constructor of each classes.
 
-Be careful with circler dependency.
+Be careful with circular dependency.
 
 ## DateTime and Timezone
 
 All datetime handling, you must not directly create `DateTime` or `Carbon` classes, but use `DateTimeHelper`. Because `DateTimeHelper` is designed to handle Timezone properly.
 
-In the app, there are 2 timezone. One is For Database, and another one is for presentation ( shown on the web pages ). If you use `DateTimeHelper`, all datetime are stored with proper timezone( UTC ) to the database, and shown in the user's timezone.
+In the app, there are 2 timezones. One is For Database, and another one is for presentation ( shown on the web pages ). If you use `DateTimeHelper`, all datetime are stored with proper timezone( UTC ) to the database, and shown in the user's timezone.
 
 Timezone settings are stored in the app.php config.
 
